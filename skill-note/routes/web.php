@@ -11,10 +11,10 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+use App\Http\Controllers\PostController;
 
+// Route::get('/', function () {
+//     return view('welcome');
+// });
 
-Route::resource('/post', 'PostController');
-
+Route::get('/', 'PostController@index')->name('top');
