@@ -16,7 +16,7 @@ class PostController extends Controller
     public function index()
     {
         $posts = Post::orderBy('created_at', 'desc')->get();
-        return view('post.index', ['posts' => $posts]);
+        return view('posts.index', ['posts' => $posts]);
     }
 
     /**
@@ -24,10 +24,10 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    // public function create()
-    // {
-    //     //
-    // }
+    public function create()
+    {
+        return view('posts.create');
+    }
 
     /**
      * Store a newly created resource in storage.
@@ -37,35 +37,14 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        $post = new Post;
-        $form = $request->all();
+        $params = $request->validate([
+            'title' => 'required|max:50',
+            'body' => 'required|max:2000',
+        ]);
 
-        $rules = [
-            'user_id' => 'integer|required',
-            'title' => 'required',
-            'content' => 'required',
-        ];
-        $message = [
-            'user_id.integer' => 'System Error',
-            'user_id.required' => 'System Error',
-            'title.required' => 'タイトルが入力されていません',
-            'message.required' => 'メッセージが入力されていません'
-        ];
-        $validator = Validator::make($form, $rules, $message);
+        Post::create($params);
 
-        if ($validator->fails()) {
-            return redirect('/post')
-                ->withErrors($validator)
-                ->withInput();
-        }else{
-            unset($form['_token']);
-            $post->user_id = $request->user_id;
-            $post->title = $request->title;
-            $post->content = $request->content;
-            $post->save();
-
-            return redirect('/post');
-        }
+        return redirect()->route('top');
     }
 
     /**
@@ -74,11 +53,13 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id)
+    public function show($post_id)
     {
-        $item = Post::find($id);
+        $post = Post::findOrFail($post_id);
 
-        return view('post.show', ['item' => $item]);
+        return view('posts.show', [
+            'post' => $post,
+            ]);
     }
 
     /**
