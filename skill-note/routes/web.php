@@ -20,3 +20,5 @@ use App\Http\Controllers\PostController;
 Route::get('/', 'PostController@index')->name('top');
 
 Route::resource('posts', 'PostController', ['only' => ['create', 'store', 'show']]);
+
+Route::resource('comments', 'CommentsController', ['only' => ['store']]);

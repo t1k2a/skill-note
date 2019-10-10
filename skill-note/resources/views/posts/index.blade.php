@@ -14,9 +14,9 @@
                     {{ $post->title }}
                 </div>
                 <div class="card-body">
-                    <p class="card-text">
-                        {!! nl2br(e(str_limit($post->body, 200))) !!}
-                    </p>
+                        <p class="card-text">
+                            {!! nl2br(e(str_limit($post->body, 200))) !!}
+                        </p>
 
                     <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}">
                     　　続きを読む

@@ -12,6 +12,32 @@
               {!! nl2br(e($post->body)) !!}
           </p>
 
+          <form class="mb-4" method="POST" action="{{ route('comments.store') }}">
+              @csrf
+
+              <input name="post_id" type="hidden" value="{{ $post->id }}">
+
+              <div class="form-group">
+                  <label for="body">
+                      本文
+                  </label>
+
+                  <textarea name="body" id="body" rows="4">
+                      {{ old('body') }}
+                  </textarea>
+                  @if ($errors->has('body'))
+                    <div class="invalid-feedback">
+                        {{ $errors->first('body') }}
+                    </div>
+                  @endif
+              </div>
+
+              <div class="mt-4">
+                  <button type="submit" class="btn btn-primary">
+                      コメントする
+                  </button>
+              </div>
+          </form>
           <section>
               <h2 class="h5 mb-4">
                   コメント
@@ -22,9 +48,9 @@
                         {{ $comment->created_at->format('Y.m.d H:i') }} 
                     </time>
                     <p class="mt-2">
-                        {{!! nl2br(e($comment->body)) !!}}    
-                    </p>               
-                </div>    
+                        {!! nl2br(e($comment->body)) !!}
+                    </p>
+                </div>
               @empty
                   <p>コメントはまだありません。</p>
               @endforelse
