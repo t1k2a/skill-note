@@ -68,10 +68,14 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function edit($id)
-    // {
-    //     //
-    // }
+    public function edit($post_id)
+    {
+        $post = Post::findOrFail($post_id);
+
+        return view('posts.edit', [
+            'post' => $post,
+        ]);
+    }
 
     /**
      * Update the specified resource in storage.
@@ -80,10 +84,18 @@ class PostController extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    // public function update(Request $request, $id)
-    // {
-    //     //
-    // }
+    public function update($post_id, Request $request)
+    {
+        $params = $request->validate([
+            'title' => 'required|max:50',
+            'body' => 'required|max:2000',
+        ]);
+
+        $post = Post::findOrFail($post_id);
+        $post->fill($params)->save();
+
+        return redirect()->route('posts.show', ['post' => $post]);
+    }
 
     /**
      * Remove the specified resource from storage.
