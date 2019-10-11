@@ -35,6 +35,9 @@
                 </div>
             </div>
         @endforeach
+        <div class="d-flex justify-content-center mb-5">
+            {{ $posts->links() }}
+        </div>
         @if(count($posts) === 0)
             <div>投稿記事がありません</div>
         @endif
