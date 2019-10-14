@@ -34,7 +34,7 @@
     <header class="navbar navbar-dark bg-dark">
         <div class="container">
             <a class="navbar-brand" href="{{ url("") }}">
-                技術ノート
+               <h1>技術ノート</h1>
             </a>
         </div>
     </header>

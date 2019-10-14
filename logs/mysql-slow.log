@@ -1,0 +1,45 @@
+/usr/sbin/mysqld, Version: 8.0.17 (MySQL Community Server - GPL). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2019-10-10T14:36:16.770939+09:00 0 [Warning] [MY-011070] [Server] 'Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it' is deprecated and will be removed in a future release.
+2019-10-10T14:36:16.770985+09:00 0 [Warning] [MY-000076] [Server] option 'log_queries_not_using_indexes': boolean value '0;' was not recognized. Set to OFF.
+2019-10-10T14:36:16.771961+09:00 0 [System] [MY-013169] [Server] /usr/sbin/mysqld (mysqld 8.0.17) initializing of server in progress as process 28
+2019-10-10T14:36:21.941424+09:00 5 [Warning] [MY-010453] [Server] root@localhost is created with an empty password ! Please consider switching off the --initialize-insecure option.
+2019-10-10T14:36:39.134823+09:00 0 [System] [MY-013170] [Server] /usr/sbin/mysqld (mysqld 8.0.17) initializing of server has completed
+/usr/sbin/mysqld, Version: 8.0.17 (MySQL Community Server - GPL). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2019-10-10T14:36:41.606111+09:00 0 [Warning] [MY-011070] [Server] 'Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it' is deprecated and will be removed in a future release.
+2019-10-10T14:36:41.606222+09:00 0 [Warning] [MY-000076] [Server] option 'log_queries_not_using_indexes': boolean value '0;' was not recognized. Set to OFF.
+2019-10-10T14:36:41.606403+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.17) starting as process 80
+2019-10-10T14:36:42.378026+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-10-10T14:36:42.384746+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2019-10-10T14:36:42.454823+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.17'  socket: '/var/run/mysqld/mysqld.sock'  port: 0  MySQL Community Server - GPL.
+2019-10-10T14:36:42.639660+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: '/var/run/mysqld/mysqlx.sock'
+/usr/sbin/mysqld, Version: 8.0.17 (MySQL Community Server - GPL). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2019-10-10T14:42:36.978346+09:00 0 [Warning] [MY-011070] [Server] 'Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it' is deprecated and will be removed in a future release.
+2019-10-10T14:42:36.978414+09:00 0 [Warning] [MY-000076] [Server] option 'log_queries_not_using_indexes': boolean value '0;' was not recognized. Set to OFF.
+2019-10-10T14:42:36.978620+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.17) starting as process 1
+2019-10-10T14:42:41.154331+09:00 0 [System] [MY-010229] [Server] Starting crash recovery...
+2019-10-10T14:42:41.189763+09:00 0 [System] [MY-010232] [Server] Crash recovery finished.
+2019-10-10T14:42:41.382160+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-10-10T14:42:41.395725+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2019-10-10T14:42:41.560911+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.17'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2019-10-10T14:42:41.782177+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: '/var/run/mysqld/mysqlx.sock' bind-address: '::' port: 33060
+mbind: Operation not permitted
+mbind: Operation not permitted
+/usr/sbin/mysqld, Version: 8.0.17 (MySQL Community Server - GPL). started with:
+Tcp port: 0  Unix socket: /var/run/mysqld/mysqld.sock
+Time                 Id Command    Argument
+2019-10-14T19:30:33.947181+09:00 0 [Warning] [MY-011070] [Server] 'Disabling symbolic links using --skip-symbolic-links (or equivalent) is the default. Consider not using this option as it' is deprecated and will be removed in a future release.
+2019-10-14T19:30:33.947213+09:00 0 [Warning] [MY-000076] [Server] option 'log_queries_not_using_indexes': boolean value '0;' was not recognized. Set to OFF.
+2019-10-14T19:30:33.947304+09:00 0 [System] [MY-010116] [Server] /usr/sbin/mysqld (mysqld 8.0.17) starting as process 1
+2019-10-14T19:30:36.171714+09:00 0 [System] [MY-010229] [Server] Starting crash recovery...
+2019-10-14T19:30:36.237942+09:00 0 [System] [MY-010232] [Server] Crash recovery finished.
+2019-10-14T19:30:36.284328+09:00 0 [Warning] [MY-010068] [Server] CA certificate ca.pem is self signed.
+2019-10-14T19:30:36.291467+09:00 0 [Warning] [MY-011810] [Server] Insecure configuration for --pid-file: Location '/var/run/mysqld' in the path is accessible to all OS users. Consider choosing a different directory.
+2019-10-14T19:30:36.341591+09:00 0 [System] [MY-010931] [Server] /usr/sbin/mysqld: ready for connections. Version: '8.0.17'  socket: '/var/run/mysqld/mysqld.sock'  port: 3306  MySQL Community Server - GPL.
+2019-10-14T19:30:36.385439+09:00 0 [System] [MY-011323] [Server] X Plugin ready for connections. Socket: '/var/run/mysqld/mysqlx.sock' bind-address: '::' port: 33060
+mbind: Operation not permitted

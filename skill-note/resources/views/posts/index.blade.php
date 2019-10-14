@@ -4,9 +4,11 @@
 @section('content')
     <div class="container mb-4">
         <div class="mb-4">
-            <a href="{{ route('posts.create') }}" class="btn btn-primary">
-              投稿を新規作成する
-            </a>
+            @auth   
+                <a href="{{ route('posts.create') }}" class="btn btn-primary">
+                投稿を新規作成する
+                </a>
+            @endauth
         </div>
         @foreach ($posts as $post)
             <div class="card mb-4">

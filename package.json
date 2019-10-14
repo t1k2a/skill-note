@@ -1,0 +1,23 @@
+{
+  "name": "skill-note",
+  "version": "1.0.0",
+  "description": "Laravel+Docker ## 簡単な説明  気になった技術をまとめるだけのノート",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/t1k2a/skill-note.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/t1k2a/skill-note/issues"
+  },
+  "homepage": "https://github.com/t1k2a/skill-note#readme",
+  "dependencies": {
+    "bitcore-lib-cash": "^8.9.0"
+  }
+}
