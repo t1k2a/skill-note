@@ -18,12 +18,14 @@ use App\Http\Controllers\PostController;
 // });
 
 Route::get('/', 'PostController@index')->name('top');
+Route::resource('posts', 'PostController',
+ ['only' => ['create', 'store', 'show', 'edit', 'update', 'destroy']])
+ ->middleware('auth');
 
-Route::group(['middleware' => ['auth', 'can:admin']], function(){
-    Route::resource('posts', 'PostController', ['only' => ['create', 'store', 'show', 'edit', 'update', 'destroy']]);
-    Route::resource('comments', 'CommentsController', ['only' => ['store']]);
-});
+Route::resource('comments', 'CommentsController', ['only' => ['store']]);
 
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+Route::get('/logout', 'HomeController@logout')->name('logout');
