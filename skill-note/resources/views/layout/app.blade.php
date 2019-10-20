@@ -8,9 +8,6 @@
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    {{--  Scipts  --}}
-    <script src="{{ asset('js/app.js') }}"></script>
-
     {{--  Fonts  --}}
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
@@ -27,8 +24,6 @@
         crossorigin="anonymous"
     >
 
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/dropify.css') }}">
-    <script src="{{ asset('js/dropify.js') }}"></script>
 </head>
 <body>
     <header class="navbar navbar-dark bg-dark">
