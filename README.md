@@ -21,3 +21,4 @@ $ php artisan migrate
  
 [【初心者向け】20分でLaravel開発環境を爆速構築するDockerハンズオン](https://qiita.com/ucan-lab/items/56c9dc3cf2e6762672f4)</blockquote>  
 [【Laravel 5.8対応】掲示板を作成するチュートリアル](https://blog.hiroyuki90.com/articles/laravel-bbs/)</blockquote>
+[Laravel：削除実行前に確認画面を表示させる](https://qol-kk.com/wp2/blog/2019/03/28/post-1174/)</blockquote>

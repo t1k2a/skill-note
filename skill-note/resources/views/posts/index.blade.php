@@ -12,16 +12,18 @@
         </div>
         @foreach ($posts as $post)
             <div class="card mb-4">
-                <div class="card-header">
-                    {{ $post->title }}
-                </div>
+                <h2>
+                    <div class="card-header">
+                        {{ $post->title }}
+                    </div>
+                </h2>
                 <div class="card-body">
+                    <h4>
                         <p class="card-text">
                             {!! nl2br(e(str_limit($post->body, 200))) !!}
                         </p>
-
-                    <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}">
-                    　　続きを読む
+                    </h4>
+                    <a class="card-link" href="{{ route('posts.show', ['post' => $post]) }}">続きを読む
                     </a>
                 </div>
                 <div class="card-footer">
@@ -30,7 +32,7 @@
                     </span>
 
                     @if($post->comments->count())
-                        <span class="badge badge-primary">
+                        <span>
                             コメント {{ $post->comments->count()}}件
                         </span>
                     @endif

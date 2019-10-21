@@ -1,6 +1,16 @@
 @extends('layout.app')
 @section('title', '技術詳細')
-
+@section('script')
+    <script>
+        function delete_alert(e){
+            if(!window.confirm('本当に削除しますか？')){
+                window.alert('キャンセルされました');
+                return false;
+            }
+            document.deleteform.submit();
+        }
+    </script>
+@endsection
 @section('content')
   <div class="container mt-4">
         <div class="mb-4 text-right">
@@ -13,18 +23,18 @@
                     @csrf
                     @method('DELETE')
 
-                    <button class="btn btn-danger">削除する</button>
+                    <button class="btn btn-danger" onClick="delete_alert(event);return false;">削除する</button>
                 </form>
         </div>
             @endauth
       <div class="border p-4">
-          <h1 class="h5 mb-4">
+          <h2 class="mb-4">
               {{ $post->title }}
-          </h1>
+          </h2>
 
-          <p class="mb-5">
+          <h4 class="mb-5">
               {!! nl2br(e($post->body)) !!}
-          </p>
+          </h4>
 
           <form class="mb-4" method="POST" action="{{ route('comments.store') }}">
               @csrf
