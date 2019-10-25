@@ -4,6 +4,7 @@
   "description": "Laravel+Docker ## 簡単な説明  気になった技術をまとめるだけのノート",
   "main": "index.js",
   "scripts": {
+    "start": "index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
